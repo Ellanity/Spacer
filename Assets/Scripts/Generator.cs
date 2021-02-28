@@ -43,7 +43,7 @@ public class Generator : MonoBehaviour
 
     void Update()
     {
-        //spawnMeteorite();
+        spawnMeteorite();
         spawnStar();
         spawnBonus();
         spawnEnemy();
@@ -128,7 +128,6 @@ public class Generator : MonoBehaviour
             time5 = 0;
             Enemy newEnemy = Instantiate(enemyPrefab);
             enemyPrefab.transform.position = new Vector3(0, 0, 0);
-            enemyPrefab.transform.localScale = new Vector3(0, 0, 0);
         }
     }
 }

@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        this.transform.localScale = new Vector3(0, 0, 0);
         time = GameObject.Find("Generator").GetComponent<Generator>().time;
 
         angle = this.GetComponent<Enemy_Angle>().angle;
