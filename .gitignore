@@ -1,4 +1,8 @@
 *.meta
 *.dwlt
-*cache/
-*Cache/
+*.cache
+*.log
+**/*cache*
+**/*Cache*
+**/*logs*
+**/*Logs*
