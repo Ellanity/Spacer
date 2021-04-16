@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bonus : MonoBehaviour
+public class Meteorite : MonoBehaviour
 {
     [SerializeField]
     private AnimationCurve scaleCurve;
@@ -19,6 +19,7 @@ public class Bonus : MonoBehaviour
         transform.localScale = new Vector3(scale,scale,scale);
         
         angle = Random.Range(0f,Mathf.PI * 2);
+        rb.angularVelocity = Random.Range(40f,120f);
         
         float posX = Mathf.Cos(angle);
         float posY = Mathf.Sin(angle);
@@ -36,4 +37,5 @@ public class Bonus : MonoBehaviour
         scale = scaleCurve.Evaluate(range);
         transform.localScale = new Vector2(scale,scale);
     }
+
 }

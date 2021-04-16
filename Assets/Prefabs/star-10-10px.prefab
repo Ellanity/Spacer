@@ -156,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390129062634994128}
   - component: {fileID: 390129062634994129}
-  - component: {fileID: 8106435526463629860}
+  - component: {fileID: 3477283439058314490}
   m_Layer: 0
   m_Name: star-10-10px
   m_TagString: Untagged
@@ -229,7 +229,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8106435526463629860
+--- !u!114 &3477283439058314490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,66 +238,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 390129062634994126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc1bfc25d15d6e4a8e7bdcc8d04c519, type: 3}
+  m_Script: {fileID: 11500000, guid: e23d2fdf656c2934593c107c1cb908d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scale:
+  scale:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.7
-      inSlope: 0.1
-      outSlope: 0.1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 8
-      value: 1.5
-      inSlope: 0.1
-      outSlope: 0.1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  Speed:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 15
-      inSlope: 0
-      outSlope: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 5.4608135
-      value: 18
-      inSlope: 0.091209054
-      outSlope: 0.091209054
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.15631466
-    - serializedVersion: 3
-      time: 15.86647
-      value: 20
-      inSlope: 0.25964156
-      outSlope: 0.25964156
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.076665714
-    - serializedVersion: 3
-      time: 30
-      value: 22
+      time: 1
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -307,5 +265,3 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 0
-  speed: 15

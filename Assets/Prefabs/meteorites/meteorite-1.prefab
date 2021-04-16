@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3234323274062206527}
   - component: {fileID: 5548788066170299864}
-  - component: {fileID: 4227559145462376356}
-  - component: {fileID: 5378549125928707819}
   - component: {fileID: 3331380649279454774}
+  - component: {fileID: 5378549125928707819}
+  - component: {fileID: -226652184032301621}
   m_Layer: 0
   m_Name: meteorite-1
   m_TagString: meteorite
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7989834818247103138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.122, y: 0.883, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,150 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4227559145462376356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7989834818247103138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e35664ca02d74284094f304d0a3eff5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 0
-  Speed:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0.30440357
-      outSlope: 0.30440357
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 4.973472
-      value: 1.5139427
-      inSlope: 0.027486594
-      outSlope: 0.027486594
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.028845336
-    - serializedVersion: 3
-      time: 200
-      value: 3
-      inSlope: 0.001626233
-      outSlope: 0.001626233
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.036034323
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  Scale:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1.1578326
-      outSlope: 1.1578326
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.6112819
-      value: 0.7077621
-      inSlope: 1.0790378
-      outSlope: 1.0790378
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.20675047
-    - serializedVersion: 3
-      time: 1.2992165
-      value: 1.2835417
-      inSlope: 0.47603947
-      outSlope: 0.47603947
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.07785197
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 7.976208
-      value: 2.0716982
-      inSlope: 0.118040666
-      outSlope: 0.118040666
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  koef:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0.4396507
-      outSlope: 0.4396507
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 4.27811
-      value: 2.8808742
-      inSlope: 1.2949051
-      outSlope: 1.2949051
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 6.663574
-      value: 8.010002
-      inSlope: 2.1501594
-      outSlope: 2.1501594
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  radius: 0
-  speed: 1
---- !u!50 &5378549125928707819
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7989834818247103138}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!58 &3331380649279454774
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -244,3 +100,69 @@ CircleCollider2D:
   m_Offset: {x: -0.015506893, y: 0}
   serializedVersion: 2
   m_Radius: 0.37518767
+--- !u!50 &5378549125928707819
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7989834818247103138}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-226652184032301621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7989834818247103138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960827f6249bde74d97de524fd1524b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.5
+      outSlope: 0.5
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2
+      value: 1
+      inSlope: 0.18952057
+      outSlope: 0.18952057
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.032978
+    - serializedVersion: 3
+      time: 10
+      value: 2
+      inSlope: 0.052079298
+      outSlope: 0.052079298
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.036002755
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

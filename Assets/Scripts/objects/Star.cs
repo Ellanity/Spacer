@@ -4,22 +4,13 @@ using UnityEngine;
 
 public class Star : MonoBehaviour
 {
-    private float time;
-    public AnimationCurve Scale;
-    public AnimationCurve Speed;
-    public float radius;
-    private float posX;
-    private float posY;
-    private float angle;
-    public float speed = 20f;
-    private float rotation;
-
-    //public time = 
-
-    private void Start()
+    public AnimationCurve scale;
+    private float radius = 0;
+    private float angle = 0;    
+    private float speed = 15f;
+    void Start()
     {
-        time = GameObject.Find("Generator").GetComponent<Generator>().time;
-        //rotation = Random.Range(-0.1f, 0.1f);
+        transform.position = new Vector3(Random.Range(-4f,4f), Random.Range(-4f, 4f), 0);
         float x = transform.position.x;
         float y = transform.position.y;
         radius = Mathf.Sqrt(x * x + y * y);
@@ -28,19 +19,19 @@ public class Star : MonoBehaviour
         else
             angle = -Mathf.Acos(x / radius);
     }
+
+    // Update is called once per frame
     void Update()
     {
         radius = radius + speed * Time.deltaTime;
-        posX = Mathf.Cos(angle) * radius;
-        posY = Mathf.Sin(angle) * radius;
+        float posX = Mathf.Cos(angle) * radius;
+        float posY = Mathf.Sin(angle) * radius;
         transform.position = new Vector2(posX, posY);
-        if (radius > 8f)
+        if (radius > 10f)
         {
             Destroy(gameObject);
         }
-        speed = Speed.Evaluate(time);
-        float scale = Scale.Evaluate(radius); ;
-        transform.localScale = new Vector3(scale, scale, scale);
-        //transform.Rotate(0, 0, rotation);
+        float TempScale = scale.Evaluate(radius);
+        transform.localScale = new Vector3(TempScale, TempScale, TempScale);
     }
 }
