@@ -36,17 +36,21 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Enemy\Enemy_Movement.cs" />
      <Compile Include="Assets\Scripts\Generators\BonusGenerator.cs" />
+     <Compile Include="Assets\Scripts\Generators\EnemyGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\MeteoriteGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\StarGenerator.cs" />
      <Compile Include="Assets\Scripts\GlobalTime.cs" />
      <Compile Include="Assets\Scripts\Objects\Bonus.cs" />
+     <Compile Include="Assets\Scripts\Objects\Bullet.cs" />
      <Compile Include="Assets\Scripts\Objects\Meteorite.cs" />
      <Compile Include="Assets\Scripts\Objects\Star.cs" />
      <Compile Include="Assets\Scripts\Respawn.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Shield.cs" />
      <Compile Include="Assets\Scripts\Ship\Ship_Movement.cs" />
+     <Compile Include="Assets\Scripts\Ship\Ship_Shooting.cs" />
      <Compile Include="Assets\Scripts\Ship\Ship_Triggers.cs" />
     <Reference Include="UnityEngine">
         <HintPath>E:/Gamedev/Unity/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

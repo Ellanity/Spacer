@@ -15,7 +15,8 @@ public class Ship_Movement : MonoBehaviour
     private float MaxRadius =5f;
     [SerializeField]
     private float MinRadius = 3f;
-    private float Angle = 0f;
+    [HideInInspector]
+    public float Angle = 0f;
     private Vector3 Offset = new Vector3 (0, 0, 90);
     
     void Update()

@@ -21,8 +21,7 @@ public class BonusGenerator : MonoBehaviour
         {
             TempTime = 0;
             Delay = Random.Range(10f,20f);
-            //Delay = 1;
-            GameObject NewBonus = Instantiate(Prefab[Random.Range(0, Prefab.Count)]);
+            Instantiate(Prefab[Random.Range(0, Prefab.Count)]);
         }
     }
 }

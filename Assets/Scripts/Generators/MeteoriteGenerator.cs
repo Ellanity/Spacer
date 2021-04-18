@@ -21,7 +21,7 @@ public class MeteoriteGenerator : MonoBehaviour
         if(TempTime >= Delay.Evaluate(timer.time))
         {
             TempTime = 0;
-            GameObject NewMeteorite = Instantiate(Prefab[Random.Range(0, Prefab.Count)]);
+            Instantiate(Prefab[Random.Range(0, Prefab.Count)]);
         }
     }
 }

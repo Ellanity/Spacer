@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StarGenerator : MonoBehaviour
+public class EnemyGenerator : MonoBehaviour
 {
     public List<GameObject> Prefab;
-    public float Delay;
+    public AnimationCurve Delay;
     private float TempTime = 0;
     private GlobalTime timer => transform.parent.GetComponent<GlobalTime>();  
     //private float 
 
     void Update()
     {
-        SpawnStar();
+        SpawnEnemy();
         TempTime += Time.deltaTime;
     }
 
-    void SpawnStar()
+    void SpawnEnemy()
     {
-        if(TempTime >= Delay)
+        if(TempTime >= Delay.Evaluate(timer.time))
         {
             TempTime = 0;
             Instantiate(Prefab[Random.Range(0, Prefab.Count)]);
