@@ -9,6 +9,9 @@ TagManager:
   - bonus_shield
   - enemy
   - bullet
+  - coin
+  - gem
+  - enemy_bullet
   layers:
   - Default
   - TransparentFX

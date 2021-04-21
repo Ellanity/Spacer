@@ -4,8 +4,9 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public Text points;
-    public float time;
-    public AnimationCurve koef;
+    private float time = 0;
+    [SerializeField]
+    private AnimationCurve koef;
 
 
     // Update is called once per frame

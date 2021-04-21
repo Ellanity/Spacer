@@ -11,25 +11,35 @@ public class Ship_Triggers : MonoBehaviour
     private GameObject Shield => transform.GetChild(2).gameObject; 
     [SerializeField]
     private Text LivesCounter;
+    
+    [SerializeField]
+    private Stats _Stats;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "bonus_hp")
         {
             AddHP();
-            Destroy(other.gameObject);
         }
         if (other.tag == "bonus_shield")
         {
             Invulnerability();
-            Destroy(other.gameObject);
         }
-        if ((other.tag == "meteorite" || other.tag == "enemy") && (!Shield.activeSelf))
+        if(other.tag == "coin")
+        {
+            _Stats.AddCoin((int)1);
+        }
+        if(other.tag == "gem")
+        {
+            _Stats.AddGem((int)1);
+        }
+        if ((other.tag == "meteorite" || other.tag == "enemy" || other.tag == "enemy_bullet") && (!Shield.activeSelf))
         {
             RemoveHP();
             Invulnerability();
-            Destroy(other.gameObject);
         }
+        if(other.tag != "bullet")
+            Destroy(other.gameObject);
     } 
 
     void AddHP()
