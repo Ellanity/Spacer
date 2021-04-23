@@ -11,16 +11,16 @@ public class GemGenerator : MonoBehaviour
 
     void Update()
     {
-        SpawnBonus();
-        TempTime += Time.deltaTime;
-    }
-
-    void SpawnBonus()
-    {
+        TempTime += Time.deltaTime;   
         if(TempTime >= Delay)
         {
-            TempTime = 0;
-            Instantiate(Prefab);
+            SpawnBonus();
         }
+    }
+
+    public void SpawnBonus()
+    {
+        TempTime = 0;
+        Instantiate(Prefab);
     }
 }

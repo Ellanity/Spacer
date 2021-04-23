@@ -39,13 +39,17 @@
      <Compile Include="Assets\Scripts\Enemy\Enemy_Movement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Shooting.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Trigger.cs" />
+     <Compile Include="Assets\Scripts\Events.cs" />
+     <Compile Include="Assets\Scripts\GameOver\Exit.cs" />
      <Compile Include="Assets\Scripts\Generators\BonusGenerator.cs" />
+     <Compile Include="Assets\Scripts\Generators\BossGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\CoinGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\EnemyGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\GemGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\MeteoriteGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\StarGenerator.cs" />
      <Compile Include="Assets\Scripts\GlobalTime.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\Buttons.cs" />
      <Compile Include="Assets\Scripts\Objects\Bonus.cs" />
      <Compile Include="Assets\Scripts\Objects\Bullet.cs" />
      <Compile Include="Assets\Scripts\Objects\Meteorite.cs" />
