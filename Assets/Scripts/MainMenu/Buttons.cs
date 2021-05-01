@@ -12,6 +12,8 @@ public class Buttons : MonoBehaviour
     private Button _Settings;
     [SerializeField]
     private Button _Exit;
+    [SerializeField]
+    private Button _Shop;
 
 
     void Start()
@@ -19,6 +21,7 @@ public class Buttons : MonoBehaviour
         _Start.onClick.AddListener(_StartClick);
         _Settings.onClick.AddListener(_SettingsClick);
         _Exit.onClick.AddListener(_ExitClick);
+        _Shop.onClick.AddListener(_ShopClick);
     }
 
     void _StartClick()
@@ -34,5 +37,10 @@ public class Buttons : MonoBehaviour
     void _ExitClick()
     {
         Application.Quit();
+    }
+
+    void _ShopClick()
+    {
+        SceneManager.LoadScene(4);
     }
 }

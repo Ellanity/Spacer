@@ -17,12 +17,14 @@ public class Stats : MonoBehaviour
     public void AddCoin(int Count)
     {
         Coins += Count;
+        GlobalCache.Inst.Gold += Count;
         CoinsText.text = "Coins - " + Coins.ToString();
     }
 
     public void AddGem(int Count)
     {
         Gems += Count;
+        GlobalCache.Inst.Gems += Count;
         GemsText.text = "Gems - " + Gems.ToString();
     }
 }

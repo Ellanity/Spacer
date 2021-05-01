@@ -60,7 +60,7 @@ public class Events : MonoBehaviour
             _EnemyText.SetActive(true);
             _EnemyGenerator.SetActive(true);
         }
-        else if(flag > 100)
+        else if(flag < 100)
         {
             delay = 0;
             BossDefeated = false;

@@ -48,8 +48,10 @@
      <Compile Include="Assets\Scripts\Generators\GemGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\MeteoriteGenerator.cs" />
      <Compile Include="Assets\Scripts\Generators\StarGenerator.cs" />
+     <Compile Include="Assets\Scripts\GlobalCache.cs" />
      <Compile Include="Assets\Scripts\GlobalTime.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Buttons.cs" />
+     <Compile Include="Assets\Scripts\MainMenuMoney.cs" />
      <Compile Include="Assets\Scripts\Objects\Bonus.cs" />
      <Compile Include="Assets\Scripts\Objects\Bullet.cs" />
      <Compile Include="Assets\Scripts\Objects\Meteorite.cs" />
@@ -58,7 +60,12 @@
      <Compile Include="Assets\Scripts\Shield.cs" />
      <Compile Include="Assets\Scripts\Ship\Ship_Movement.cs" />
      <Compile Include="Assets\Scripts\Ship\Ship_Shooting.cs" />
+     <Compile Include="Assets\Scripts\Ship\Ship_Texture.cs" />
      <Compile Include="Assets\Scripts\Ship\Ship_Triggers.cs" />
+     <Compile Include="Assets\Scripts\Shop\ButtonPrefab.cs" />
+     <Compile Include="Assets\Scripts\Shop\CountMoney.cs" />
+     <Compile Include="Assets\Scripts\Shop\NotEnough.cs" />
+     <Compile Include="Assets\Scripts\Shop\ReturnToMainMenu.cs" />
      <Compile Include="Assets\Scripts\Stats.cs" />
      <Compile Include="Assets\Scripts\UI\Score.cs" />
     <Reference Include="UnityEngine">
