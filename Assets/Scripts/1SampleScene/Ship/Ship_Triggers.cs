@@ -9,12 +9,15 @@ public class Ship_Triggers : MonoBehaviour
     [SerializeField]
     private float HealthPoints = 3;
     private GameObject Shield => transform.GetChild(2).gameObject; 
+
     [SerializeField]
     private Text LivesCounter;
     
     [SerializeField]
     private Stats _Stats;
 
+    [SerializeField]
+    private Score _Score;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "bonus_hp")
@@ -33,12 +36,12 @@ public class Ship_Triggers : MonoBehaviour
         {
             _Stats.AddGem((int)1);
         }
-        if ((other.tag == "meteorite" || other.tag == "enemy" || other.tag == "enemy_bullet") && (!Shield.activeSelf))
+        if ((other.tag == "meteorite" || other.tag == "enemy" || other.tag == "enemy_bullet" || other.tag == "ray") && (!Shield.activeSelf))
         {
             RemoveHP();
             Invulnerability();
         }
-        if(other.tag != "bullet")
+        if(other.tag != "bullet" && other.tag != "ray")
             Destroy(other.gameObject);
     } 
 
@@ -56,7 +59,10 @@ public class Ship_Triggers : MonoBehaviour
             LivesCounter.text = "x " + HealthPoints.ToString();
         }
         else
+        {
+            GlobalCache.Inst.Score = _Score._Score;
             SceneManager.LoadScene(1);
+        }
     }
     void Invulnerability()
     {

@@ -21,13 +21,12 @@ public class Events : MonoBehaviour
     private float TempTime = 0;
     private float delay = 3f;
 
-    public bool BossDefeated = false;
-    public int flag = -1;
+    private int flag = -1;
 
     void Update()
     {
         TempTime += Time.deltaTime;
-        if((delay != 0f && delay < TempTime) || (delay == 0f && BossDefeated))
+        if((delay != 0f && delay < TempTime) || (delay == 0f && GlobalCache.Inst.BossDefeated))
         {
             flag = Random.Range(0,100);
             //Debug.Log(flag);
@@ -63,9 +62,9 @@ public class Events : MonoBehaviour
         else if(flag < 100)
         {
             delay = 0;
-            BossDefeated = false;
+            GlobalCache.Inst.BossDefeated = false;
             _BossText.SetActive(true);
-            _BossGenerator.SetActive(true);
+            _BossGenerator.GetComponent<BossGenerator>().SpawnBoss();
         }
         TempTime = 0;
         flag = -1;

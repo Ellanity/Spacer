@@ -36,38 +36,42 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Enemy\Enemy_Movement.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Enemy_Shooting.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Enemy_Trigger.cs" />
-     <Compile Include="Assets\Scripts\Events.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Boss\BossAttack.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Boss\BossTriggers.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Boss\LaserRay.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Enemy\Enemy_Movement.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Enemy\Enemy_Shooting.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Enemy\Enemy_Trigger.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Events.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Generators\BonusGenerator.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Generators\BossGenerator.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Generators\CoinGenerator.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Generators\EnemyGenerator.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Generators\GemGenerator.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Generators\MeteoriteGenerator.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Generators\StarGenerator.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\GlobalTime.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Objects\Bonus.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Objects\Bullet.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Objects\Meteorite.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Objects\Star.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Respawn.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Shield.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Ship\Ship_Movement.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Ship\Ship_Shooting.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Ship\Ship_Texture.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Ship\Ship_Triggers.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Stats.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\UI\Score.cs" />
      <Compile Include="Assets\Scripts\GameOver\Exit.cs" />
-     <Compile Include="Assets\Scripts\Generators\BonusGenerator.cs" />
-     <Compile Include="Assets\Scripts\Generators\BossGenerator.cs" />
-     <Compile Include="Assets\Scripts\Generators\CoinGenerator.cs" />
-     <Compile Include="Assets\Scripts\Generators\EnemyGenerator.cs" />
-     <Compile Include="Assets\Scripts\Generators\GemGenerator.cs" />
-     <Compile Include="Assets\Scripts\Generators\MeteoriteGenerator.cs" />
-     <Compile Include="Assets\Scripts\Generators\StarGenerator.cs" />
+     <Compile Include="Assets\Scripts\GameOver\ScoreShower.cs" />
      <Compile Include="Assets\Scripts\GlobalCache.cs" />
-     <Compile Include="Assets\Scripts\GlobalTime.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Buttons.cs" />
-     <Compile Include="Assets\Scripts\MainMenuMoney.cs" />
-     <Compile Include="Assets\Scripts\Objects\Bonus.cs" />
-     <Compile Include="Assets\Scripts\Objects\Bullet.cs" />
-     <Compile Include="Assets\Scripts\Objects\Meteorite.cs" />
-     <Compile Include="Assets\Scripts\Objects\Star.cs" />
-     <Compile Include="Assets\Scripts\Respawn.cs" />
-     <Compile Include="Assets\Scripts\Shield.cs" />
-     <Compile Include="Assets\Scripts\Ship\Ship_Movement.cs" />
-     <Compile Include="Assets\Scripts\Ship\Ship_Shooting.cs" />
-     <Compile Include="Assets\Scripts\Ship\Ship_Texture.cs" />
-     <Compile Include="Assets\Scripts\Ship\Ship_Triggers.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\MainMenuMoney.cs" />
      <Compile Include="Assets\Scripts\Shop\ButtonPrefab.cs" />
      <Compile Include="Assets\Scripts\Shop\CountMoney.cs" />
      <Compile Include="Assets\Scripts\Shop\NotEnough.cs" />
      <Compile Include="Assets\Scripts\Shop\ReturnToMainMenu.cs" />
-     <Compile Include="Assets\Scripts\Stats.cs" />
-     <Compile Include="Assets\Scripts\UI\Score.cs" />
     <Reference Include="UnityEngine">
         <HintPath>E:/Gamedev/Unity/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

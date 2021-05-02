@@ -37,8 +37,9 @@ public class Ship_Movement : MonoBehaviour
         float Scale = RadiusScale.Evaluate(Radius);
         transform.localScale = new Vector3(Scale, Scale, Scale);
         
-        if (Angle >= Mathf.PI * 2)
-            Angle -= Mathf.PI * 2;
+        if (Mathf.Abs(Angle) >= Mathf.PI * 2)
+            Angle = Mathf.Abs(Angle) - Mathf.PI * 2;
+        GlobalCache.Inst.PlayerAngle = Angle;
     }
     
     /*

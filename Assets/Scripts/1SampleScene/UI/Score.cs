@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public Text points;
+    public int _Score = 0;
     private float time = 0;
     [SerializeField]
     private AnimationCurve koef;
@@ -13,6 +14,7 @@ public class Score : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        points.text ="Score : " + ((int)(time*koef.Evaluate(time))).ToString();
+        _Score = (int)(time * koef.Evaluate(time));
+        points.text ="Score : " + _Score.ToString();
     }
 }

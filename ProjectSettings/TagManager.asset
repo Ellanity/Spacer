@@ -12,6 +12,7 @@ TagManager:
   - coin
   - gem
   - enemy_bullet
+  - ray
   layers:
   - Default
   - TransparentFX
