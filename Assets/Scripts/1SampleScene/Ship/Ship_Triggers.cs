@@ -41,8 +41,13 @@ public class Ship_Triggers : MonoBehaviour
             RemoveHP();
             Invulnerability();
         }
-        if(other.tag != "bullet" && other.tag != "ray")
-            Destroy(other.gameObject);
+        if(other.tag == "bullet")
+            return;
+        if(other.tag == "ray" )
+            return;
+        if(other.tag == "shield")
+            return;
+        Destroy(other.gameObject);
     } 
 
     void AddHP()

@@ -29,7 +29,7 @@ public class Events : MonoBehaviour
         if((delay != 0f && delay < TempTime) || (delay == 0f && GlobalCache.Inst.BossDefeated))
         {
             flag = Random.Range(0,100);
-            //Debug.Log(flag);
+            Debug.Log(flag);
             StartEvent(flag);
         }
         if(TempTime >= 3f && flag != -1)
@@ -48,7 +48,7 @@ public class Events : MonoBehaviour
         if(flag < 45)
         {
             delay = Random.Range(20f,50f);
-            //delay = 10f;
+            //delay = 5f;
             _MeteoriteText.SetActive(true);
             _MeteoriteGenerator.SetActive(true);
         }

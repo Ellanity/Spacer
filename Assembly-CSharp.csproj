@@ -38,7 +38,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\1SampleScene\Boss\BossAttack.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\BossTriggers.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Boss\Generator.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Boss\GeneratorCounter.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Boss\HPBossSlider.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\LaserRay.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Boss\Shieldb.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Enemy\Enemy_Movement.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Enemy\Enemy_Shooting.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Enemy\Enemy_Trigger.cs" />

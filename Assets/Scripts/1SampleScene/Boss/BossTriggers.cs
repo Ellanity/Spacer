@@ -1,18 +1,33 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BossTriggers : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    public int BossHp = 25;
+    public GameObject SliderBoss;
     void Start()
     {
-        
+        SliderBoss = GameObject.FindWithTag("SliderHp");
+        //SliderBoss.SetActive(true);
+        SliderBoss.GetComponent<HPBossSlider>().SetMaxHealth(BossHp);
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if(other.tag == "bullet")
+        {
+            BossHp--;
+            SliderBoss.GetComponent<HPBossSlider>().AddHealth(-1);
+            if(BossHp <= 0)
+                BossDestroy();
+            Destroy(other.gameObject); 
+        }
+    }
+    void BossDestroy()
+    {
+        GlobalCache.Inst.BossDefeated = true;
+        //SliderBoss.SetActive(false);
+        Destroy(gameObject);
     }
 }

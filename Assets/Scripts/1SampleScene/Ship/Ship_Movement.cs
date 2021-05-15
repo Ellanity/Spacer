@@ -6,13 +6,13 @@ public class Ship_Movement : MonoBehaviour
 {
     [SerializeField]
     private AnimationCurve RadiusScale;
-    private float Radius = 2f;
+    private float Radius = 4f;
     [SerializeField]    
     private float AngularSpeed = 2f;
     [SerializeField]
     private float RadiusSpeed = 2f;
     [SerializeField]
-    private float MaxRadius =5f;
+    private float MaxRadius = 5f;
     [SerializeField]
     private float MinRadius = 3f;
     //[HideInInspector]
