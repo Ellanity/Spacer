@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class BossAttack : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject LeftRay;
-    [SerializeField]
-    private GameObject RightRay;
 
     [SerializeField]
     private float AttackDelay;
 
     private float TempTime = 0f;
+
+    private int PrevTypeAttack = 0;
     void Update()
     {
         TempTime += Time.deltaTime;
@@ -24,18 +22,37 @@ public class BossAttack : MonoBehaviour
     }
     void Attack()
     {
-        AttackDelay = 10f;
-        int TypeAttack = Random.Range(0,1);
-        if(TypeAttack == 0)
+        //AttackDelay = 5f;
+        int TypeAttack = Random.Range(0,3);
+        //int TypeAttack = 0;
+        if(TypeAttack == 0 && PrevTypeAttack != 0)
         {
+            AttackDelay = 5f;
+            PrevTypeAttack = 0;
             RayAttack();
         }
-        if(TypeAttack == 1)
+        else if(TypeAttack == 1 && PrevTypeAttack != 1)
         {
+            AttackDelay = 1f;
+            PrevTypeAttack = 1;
             ShootAttack();
+        }
+        else if(TypeAttack == 2 && PrevTypeAttack != 2)
+        {
+            AttackDelay = 2f;
+            PrevTypeAttack = 2;
+            BehindBlades();
+        }
+        else
+        {
+            AttackDelay = -1f;
         }
     }
 
+    [SerializeField]
+    private GameObject LeftRay;
+    [SerializeField]
+    private GameObject RightRay;
     void RayAttack()
     {
         float EulerAngle = GlobalCache.Inst.PlayerAngle * Mathf.Rad2Deg;
@@ -61,8 +78,42 @@ public class BossAttack : MonoBehaviour
         RightRay.SetActive(true);
     }
 
+    private int ShootCount = 0;
     void ShootAttack()
+    {   
+        ShootCount = 0;
+        Shoot();
+    }
+    [SerializeField]
+    private GameObject BulletType1;
+    void Shoot()
     {
-
+        if(ShootCount >= 3)
+            return;
+        ShootCount++;
+        GameObject newBullet = Instantiate(BulletType1);
+        newBullet.SetActive(true);
+        Invoke("Shoot",0.3f);
+    }
+    private List <GameObject> AllRedPoints = new List<GameObject>();
+    [SerializeField]
+    private GameObject BulletType2;
+    void BehindBlades()
+    {
+        float SpawnRadius = 5.2f;
+        float SpawnRange = 0.2f;
+        float EulerAngle = GlobalCache.Inst.PlayerAngle;
+        
+        //Debug.Log(EulerAngle);
+        for(int i = -3; i <= 3; i++)
+        {
+            float TempAngle = EulerAngle - SpawnRange * i;
+            //Debug.Log(TempAngle);
+            Vector3 Position = new Vector3(Mathf.Cos(TempAngle) * SpawnRadius, Mathf.Sin(TempAngle) * SpawnRadius, 1f);
+            GameObject NewRedPoint = Instantiate(BulletType2);
+            NewRedPoint.SetActive(true);
+            NewRedPoint.transform.position = Position;
+            AllRedPoints.Add(NewRedPoint);
+        }
     }
 }

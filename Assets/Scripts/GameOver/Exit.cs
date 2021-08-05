@@ -13,6 +13,6 @@ public class Exit : MonoBehaviour
     }
     void _ExitClick()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Main_menu");
     }
 }

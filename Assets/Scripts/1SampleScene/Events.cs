@@ -19,16 +19,22 @@ public class Events : MonoBehaviour
     private GameObject _BossText;
 
     private float TempTime = 0;
+    private float GlobalTime => GetComponent<GlobalTime>().time;
     private float delay = 3f;
 
     private int flag = -1;
+
+    private float BossTimeTrigger = 50f;
 
     void Update()
     {
         TempTime += Time.deltaTime;
         if((delay != 0f && delay < TempTime) || (delay == 0f && GlobalCache.Inst.BossDefeated))
         {
-            flag = Random.Range(0,100);
+            int maxValue = 100;
+            if(GlobalTime < BossTimeTrigger)
+                maxValue = 84;
+            flag = Random.Range(0, maxValue);
             Debug.Log(flag);
             StartEvent(flag);
         }
@@ -45,17 +51,15 @@ public class Events : MonoBehaviour
         _BossGenerator.SetActive(false);
         _EnemyGenerator.SetActive(false);
         _MeteoriteGenerator.SetActive(false);
-        if(flag < 45)
+        if(flag < 50)
         {
             delay = Random.Range(20f,50f);
-            //delay = 5f;
             _MeteoriteText.SetActive(true);
             _MeteoriteGenerator.SetActive(true);
         }
-        else if(flag < 80)
+        else if(flag < 85)
         {
             delay = Random.Range(20f,50f);
-            //delay = 5f;
             _EnemyText.SetActive(true);
             _EnemyGenerator.SetActive(true);
         }

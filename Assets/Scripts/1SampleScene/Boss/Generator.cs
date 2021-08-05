@@ -11,7 +11,7 @@ public class Generator : MonoBehaviour
         {
             _GM.MinusCounter(); 
             Destroy(other.gameObject); 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

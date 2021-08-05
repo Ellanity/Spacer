@@ -6,12 +6,15 @@ using UnityEngine.UI;
 public class MainMenuMoney : MonoBehaviour
 {
     [SerializeField]
+    private Text ScoreText;
+    [SerializeField]
     private Text CoinText;
     [SerializeField]
     private Text GemText;
     void Start()
     {
-        CoinText.text = "coins - " + GlobalCache.Inst.Gold.ToString();
-        GemText.text = "gems - " + GlobalCache.Inst.Gems.ToString(); 
+        ScoreText.text = GlobalCache.Inst.MaxScore.ToString();
+        CoinText.text = GlobalCache.Inst.Gold.ToString();
+        GemText.text = GlobalCache.Inst.Gems.ToString(); 
     }
 }

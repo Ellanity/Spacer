@@ -26,12 +26,12 @@ public class Buttons : MonoBehaviour
 
     void _StartClick()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("SampleScene");
     }
 
     void _SettingsClick()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Settings");
     }
 
     void _ExitClick()
@@ -41,6 +41,6 @@ public class Buttons : MonoBehaviour
 
     void _ShopClick()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Shop");
     }
 }

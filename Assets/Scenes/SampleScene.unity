@@ -479,7 +479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &178342619
 Transform:
   m_ObjectHideFlags: 0
@@ -735,7 +735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &404474710
 Transform:
   m_ObjectHideFlags: 0
@@ -5918,7 +5918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &814362951
 Transform:
   m_ObjectHideFlags: 0
@@ -5984,7 +5984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e114399ebfb2b744bb1e19318cb7780b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 9999
+  HealthPoints: 3
   LivesCounter: {fileID: 96358681}
   _Stats: {fileID: 1746082087}
   _Score: {fileID: 1173934656}
@@ -6129,7 +6129,7 @@ MonoBehaviour:
   AngularSpeed: 2
   RadiusSpeed: 3
   MaxRadius: 4.5
-  MinRadius: 2.5
+  MinRadius: 3
   Angle: 1.5707964
 --- !u!114 &1124835817
 MonoBehaviour:

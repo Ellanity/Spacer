@@ -14,6 +14,7 @@ public class GemGenerator : MonoBehaviour
         TempTime += Time.deltaTime;   
         if(TempTime >= Delay)
         {
+            Delay = Random.Range(100f, 300f);
             SpawnBonus();
         }
     }
