@@ -10,19 +10,24 @@ public class Enemy_Movement : MonoBehaviour
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
 
     private float Angle = 0;
+    [SerializeField]
     private float Speed = 80;
     private float Scale = 0;
 
     private bool flag = false;
     private float TempTime = 0;
     private float StopRange;
+    [SerializeField]
+    private float _maxStopRange;
+    [SerializeField]
+    private float _minStopRange;
     private float StopTime;
 
     private Vector3 Offset = new Vector3 (0, 0, 90);
 
     void Start()
     {
-        StopRange = Random.Range(1f,3f);
+        StopRange = Random.Range(_minStopRange,_maxStopRange);
         StopTime = Random.Range(1f,3f);
 
         transform.position = new Vector3(0,0,0);

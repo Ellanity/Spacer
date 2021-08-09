@@ -15,6 +15,6 @@ public class Score : MonoBehaviour
     {
         time += Time.deltaTime;
         _Score = (int)(time * koef.Evaluate(time));
-        points.text ="Score : " + _Score.ToString();
+        points.text =_Score.ToString();
     }
 }

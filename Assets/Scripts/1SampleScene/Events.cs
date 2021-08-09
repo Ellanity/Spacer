@@ -24,18 +24,27 @@ public class Events : MonoBehaviour
 
     private int flag = -1;
 
-    private float BossTimeTrigger = 50f;
+    private float BossTimeTrigger = 25f;
 
     void Update()
     {
         TempTime += Time.deltaTime;
+        if(delay != 0f && delay - 3 < TempTime)
+        {
+            _BossGenerator.SetActive(false);
+            _EnemyGenerator.SetActive(false);
+            _MeteoriteGenerator.SetActive(false);
+        }
         if((delay != 0f && delay < TempTime) || (delay == 0f && GlobalCache.Inst.BossDefeated))
         {
             int maxValue = 100;
             if(GlobalTime < BossTimeTrigger)
                 maxValue = 84;
             flag = Random.Range(0, maxValue);
-            Debug.Log(flag);
+            //flag = 90;// для теста босса
+            //flag = 40;// для теста метеоритов
+            //flag = 80;// для теста врагов
+            //Debug.Log(flag);
             StartEvent(flag);
         }
         if(TempTime >= 3f && flag != -1)
@@ -48,9 +57,6 @@ public class Events : MonoBehaviour
 
     void StartEvent(int flag)
     {
-        _BossGenerator.SetActive(false);
-        _EnemyGenerator.SetActive(false);
-        _MeteoriteGenerator.SetActive(false);
         if(flag < 50)
         {
             delay = Random.Range(20f,50f);

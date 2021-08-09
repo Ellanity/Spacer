@@ -18,13 +18,13 @@ public class Stats : MonoBehaviour
     {
         Coins += Count;
         GlobalCache.Inst.Gold += Count;
-        CoinsText.text = "Coins - " + Coins.ToString();
+        CoinsText.text = Coins.ToString();
     }
 
     public void AddGem(int Count)
     {
         Gems += Count;
         GlobalCache.Inst.Gems += Count;
-        GemsText.text = "Gems - " + Gems.ToString();
+        GemsText.text = Gems.ToString();
     }
 }

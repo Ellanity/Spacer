@@ -16,6 +16,7 @@ public class Ship_Shooting : MonoBehaviour
         TempTime += Time.deltaTime;
         if(Input.GetAxis("Fire1") != 0)
             Shoot();
+        Shoot();
     }
 
     void Shoot()

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Ship_Triggers : MonoBehaviour
 {
     [SerializeField]
-    private float HealthPoints = 3;
+    private int HealthPoints = 3;
     private GameObject Shield => transform.GetChild(2).gameObject; 
 
     [SerializeField]
@@ -18,6 +18,9 @@ public class Ship_Triggers : MonoBehaviour
 
     [SerializeField]
     private Score _Score;
+
+    [SerializeField]
+    private List<GameObject> Lives;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "bonus_hp")
@@ -52,16 +55,19 @@ public class Ship_Triggers : MonoBehaviour
 
     void AddHP()
     {
-        //if(HealthPoints < 3)
+        if(HealthPoints >= 3)
+            return;
+        Lives[HealthPoints].SetActive(true);
         HealthPoints++;
-        LivesCounter.text = "x " + HealthPoints.ToString();
+        //LivesCounter.text = "x " + HealthPoints.ToString();
     }
     void RemoveHP()
     {
         if(HealthPoints > 0)
         {
+            Lives[HealthPoints - 1].SetActive(false);
             HealthPoints--;
-            LivesCounter.text = "x " + HealthPoints.ToString();
+            //LivesCounter.text = "x " + HealthPoints.ToString();
         }
         else
         {

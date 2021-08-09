@@ -10,9 +10,9 @@ public class Meteorite : MonoBehaviour
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
 
     private float angle = 0;
+    [SerializeField]
     private float speed = 100;
     private float scale = 0;
-
     void Start()
     {
         transform.position = new Vector3(0,0,0);

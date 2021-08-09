@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1330315746054476644}
   - component: {fileID: 3936507110847007510}
-  - component: {fileID: 4462898852775657426}
-  - component: {fileID: 8488194304330461775}
-  - component: {fileID: 1153809731278509163}
+  - component: {fileID: -7117845217761264475}
   m_Layer: 0
   m_Name: coin
   m_TagString: coin
@@ -28,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2879504064085654812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6294374, y: -1.8611695, z: 0}
-  m_LocalScale: {x: 0.024838261, y: 0.024838261, z: 0.024838261}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4075dc1f21cf9c04c89835fcb5a36215, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97fffc186b29c5f41a03f91a066b8732, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,44 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &4462898852775657426
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2879504064085654812}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.040967863, y: 0}
-  serializedVersion: 2
-  m_Radius: 6.6758513
---- !u!50 &8488194304330461775
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2879504064085654812}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1153809731278509163
+--- !u!114 &-7117845217761264475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,30 +91,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2879504064085654812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba02a6b7fd748242bb33cc6d8bc168c, type: 3}
+  m_Script: {fileID: 11500000, guid: f4896481f0d6b7d4baf530aa00154400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0.03
-      outSlope: 0.03
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0.03
-      inSlope: 0.03
-      outSlope: 0.03
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  _target: {x: 0, y: 0, z: 0}
+  _spawnPoint: {x: 0, y: 0, z: 0}
+  _speed: 5
+  _delay: 0.3

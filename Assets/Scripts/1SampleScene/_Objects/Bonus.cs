@@ -10,7 +10,8 @@ public class Bonus : MonoBehaviour
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
 
     private float angle = 0;
-    private float speed = 100;
+    [SerializeField]
+    private float speed = 25;
     private float scale = 0;
 
     void Start()
