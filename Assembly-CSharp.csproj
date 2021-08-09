@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\MainMenu\MainMenuMoney.cs" />
      <Compile Include="Assets\Scripts\MainMenu\PlanetAnimation.cs" />
      <Compile Include="Assets\Scripts\MainMenu\ShipMovement.cs" />
+     <Compile Include="Assets\Scripts\Settings\ExitToMainMenu.cs" />
      <Compile Include="Assets\Scripts\Shop\ButtonPrefab.cs" />
      <Compile Include="Assets\Scripts\Shop\CountMoney.cs" />
      <Compile Include="Assets\Scripts\Shop\NotEnough.cs" />
