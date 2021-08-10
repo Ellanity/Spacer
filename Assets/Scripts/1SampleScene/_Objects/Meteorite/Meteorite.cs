@@ -29,12 +29,14 @@ public class Meteorite : MonoBehaviour
     {
         float x = transform.position.x;
         float y = transform.position.y;
-        float range = Mathf.Sqrt(x * x + y * y);
-        if(range > 10f)
+        float radius = Mathf.Sqrt(x * x + y * y);
+        if(radius > 10f)
         {
             Destroy(gameObject);
         }
-        scale = scaleCurve.Evaluate(range);
+        if(radius > 2.5f)
+            rb.AddForce(new Vector2(x, y));
+        scale = scaleCurve.Evaluate(radius);
         transform.localScale = new Vector2(scale,scale);
     }
 

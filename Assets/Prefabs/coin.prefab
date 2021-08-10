@@ -96,5 +96,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {x: 0, y: 0, z: 0}
   _spawnPoint: {x: 0, y: 0, z: 0}
+  _moneyContainer: {fileID: 0}
   _speed: 5
-  _delay: 0.3
+  _delay: 0.4

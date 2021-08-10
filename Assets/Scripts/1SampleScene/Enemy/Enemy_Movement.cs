@@ -44,16 +44,20 @@ public class Enemy_Movement : MonoBehaviour
     {
         float x = transform.position.x;
         float y = transform.position.y;
-        float range = Mathf.Sqrt(x * x + y * y);
-        if(range > 10f)
+        float radius = Mathf.Sqrt(x * x + y * y);
+        if(radius > 10f)
         {
             Destroy(gameObject);
         }
-        Scale = ScaleCurve.Evaluate(range);
+        Scale = ScaleCurve.Evaluate(radius);
         transform.localScale = new Vector2(Scale,Scale);
 
 
-        if(range > StopRange && !flag)
+        if(radius > 2.5f)
+            rb.AddForce(new Vector2(x, y));
+
+
+        if(radius > StopRange && !flag)
         {
             transform.GetChild(0).gameObject.SetActive(false);
             rb.velocity = Vector3.zero;
