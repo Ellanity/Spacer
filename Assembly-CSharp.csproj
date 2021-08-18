@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Bonus.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Bullet.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Meteorite\Meteorite.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\_Objects\Meteorite\MeteoriteMoneyTriggers.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Meteorite\MeteoriteTriggers.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Money\MoneyFlyToCollect.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Money\MoneySpawner.cs" />

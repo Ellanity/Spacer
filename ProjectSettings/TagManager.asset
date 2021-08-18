@@ -15,6 +15,7 @@ TagManager:
   - ray
   - shield
   - SliderHp
+  - meteoritecoin
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 762702561258575452}
   - component: {fileID: 1094115364879682144}
   - component: {fileID: -17781317691367466}
+  - component: {fileID: -2223606199581495665}
   m_Layer: 0
   m_Name: meteorite-2
   m_TagString: meteorite
@@ -166,4 +167,16 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  speed: 45
+  speed: 35
+--- !u!114 &-2223606199581495665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7919977373802656515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a066fe9d96de840a21fe3d44594c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 2274223594368010039}
   - component: {fileID: 6763121182139240358}
   - component: {fileID: 1219171964270597348}
-  - component: {fileID: 2820705246107783930}
   - component: {fileID: -8472798459212791805}
+  - component: {fileID: 3031044494128669185}
   m_Layer: 0
   m_Name: meteorite-coin2
-  m_TagString: meteorite
+  m_TagString: meteoritecoin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,19 +168,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  speed: 45
---- !u!114 &2820705246107783930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9012693352349086845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a066fe9d96de840a21fe3d44594c39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  speed: 35
 --- !u!114 &-8472798459212791805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,5 +183,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoneyPrefab: {fileID: 2879504064085654812, guid: 211638f2df5fdd040842f2396cdc53cc,
     type: 3}
+  _chanceToSpawnMoney: 100
   _minMoneyCount: 3
   _maxMoneyCount: 7
+--- !u!114 &3031044494128669185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012693352349086845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bccde487d5bb3e547b27ab0576074024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

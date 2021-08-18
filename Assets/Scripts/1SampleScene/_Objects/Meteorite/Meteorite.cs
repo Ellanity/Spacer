@@ -34,7 +34,7 @@ public class Meteorite : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if(radius > 2.5f)
+        if(radius > 2f)
             rb.AddForce(new Vector2(x, y));
         scale = scaleCurve.Evaluate(radius);
         transform.localScale = new Vector2(scale,scale);

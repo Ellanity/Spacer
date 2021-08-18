@@ -39,7 +39,11 @@ public class Ship_Triggers : MonoBehaviour
         {
             _Stats.AddGem((int)1);
         }
-        if ((other.tag == "meteorite" || other.tag == "enemy" || other.tag == "enemy_bullet" || other.tag == "ray") && (!Shield.activeSelf))
+        if (other.tag == "meteoritecoin")
+        {
+            other.GetComponent<MoneySpawner>().SpawnMoney();
+        }
+        if ((other.tag == "meteorite" || other.tag == "meteoritecoin" || other.tag == "enemy" || other.tag == "enemy_bullet" || other.tag == "ray") && (!Shield.activeSelf))
         {
             RemoveHP();
             Invulnerability();
