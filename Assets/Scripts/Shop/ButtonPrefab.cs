@@ -1,4 +1,4 @@
-﻿    using System.Collections;
+﻿using CI.QuickSave;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +16,7 @@ public class ButtonPrefab : MonoBehaviour
 
     void Start()
     {
+        CheckPurchased();
         GetComponent<CountMoney>().UpdateMoneyCounter();
         for(int i = 0; i < Texts.Count; i++)
         {
@@ -72,5 +73,24 @@ public class ButtonPrefab : MonoBehaviour
                 NotEnough.GetComponent<Text>().color = new Color(1,0,0,1);
             }
         }
+        QuickSaveWriter.Create("Player")
+            .Write("ShipBought", GlobalCache.Inst.ShipBought)
+            .Write("ShipTexture", GlobalCache.Inst.ShipTexture)
+            .Write("Coins", GlobalCache.Inst.Gold)
+            .Write("Gems", GlobalCache.Inst.Gems)
+            .Commit();
+        
     }
+    void CheckPurchased()
+    {
+        int result = 0;
+        QuickSaveReader.Create("Player").TryRead<int>("ShipBought", out result);
+        //Debug.Log(result);
+        if(result > 0)
+        {
+            QuickSaveReader.Create("Player").Read<int>("ShipBought", r => GlobalCache.Inst.ShipBought = r);
+            QuickSaveReader.Create("Player").Read<int>("ShipTexture", r => GlobalCache.Inst.ShipTexture = r);
+        }
+    }
+    
 }

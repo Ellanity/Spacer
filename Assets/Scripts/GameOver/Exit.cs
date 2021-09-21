@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using CI.QuickSave;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -13,6 +12,11 @@ public class Exit : MonoBehaviour
     }
     void _ExitClick()
     {
+        QuickSaveWriter.Create("Player")
+            .Write("Score", GlobalCache.Inst.MaxScore)
+            .Write("Coins", GlobalCache.Inst.Gold)
+            .Write("Gems", GlobalCache.Inst.Gems)
+            .Commit();
         SceneManager.LoadScene("Main_menu");
     }
 }
