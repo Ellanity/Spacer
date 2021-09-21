@@ -13,7 +13,7 @@ public class CountMoney : MonoBehaviour
 
     public void UpdateMoneyCounter()
     {
-        CoinText.text = "coins - " + GlobalCache.Inst.Gold.ToString();
-        GemText.text = "gems - " + GlobalCache.Inst.Gems.ToString(); 
+        CoinText.text = GlobalCache.Inst.Gold.ToString();
+        GemText.text = GlobalCache.Inst.Gems.ToString(); 
     }
 }

@@ -85,6 +85,7 @@
      <Compile Include="Assets\Scripts\1SampleScene\Ship\Ship_Texture.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Ship\Ship_Triggers.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Stats.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\UI\ReliveMenu.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\UI\Score.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Bonus.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Bullet.cs" />
@@ -101,7 +102,7 @@
      <Compile Include="Assets\Scripts\MainMenu\MainMenuMoney.cs" />
      <Compile Include="Assets\Scripts\MainMenu\PlanetAnimation.cs" />
      <Compile Include="Assets\Scripts\MainMenu\ShipMovement.cs" />
-     <Compile Include="Assets\Scripts\Save\ExampleSceneManagerController.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\Ship_Texture1.cs" />
      <Compile Include="Assets\Scripts\Settings\ExitToMainMenu.cs" />
      <Compile Include="Assets\Scripts\Shop\ButtonPrefab.cs" />
      <Compile Include="Assets\Scripts\Shop\CountMoney.cs" />

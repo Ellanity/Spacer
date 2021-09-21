@@ -76,9 +76,53 @@ public class Ship_Triggers : MonoBehaviour
         else
         {
             GlobalCache.Inst.Score = _Score._Score;
-            SceneManager.LoadScene(1);
+            Relive();
+            //SceneManager.LoadScene(1);
         }
     }
+    [SerializeField]
+    private GameObject ReliveMenu;
+    [SerializeField]
+    private Button _skip;
+    [SerializeField]
+    private Button _gems;
+    [SerializeField]
+    private Button _adds;
+    [SerializeField]
+    private Text _gemsText;
+    [SerializeField]
+    private Text _gemsPrice;
+    private int _respawnCounter = 2;
+    private int _respawnPrice = 25;
+    void Relive()
+    {
+        Time.timeScale = 0;
+        ReliveMenu.SetActive(true);
+        _gemsPrice.text = "Pay : " + _respawnPrice.ToString() + " Gems";
+        //_respawnPrice *= _respawnCounter;
+        _gemsText.text = GlobalCache.Inst.Gems.ToString();
+        _skip.onClick.AddListener(Skipped);
+        _gems.onClick.AddListener(Payed);
+        //_adds.onClick.AddListener(Payed);
+    }
+    void Payed()
+    {
+        if(GlobalCache.Inst.Gems < _respawnPrice)
+            return;
+        GlobalCache.Inst.Gems -= _respawnPrice;
+        _respawnPrice *= _respawnCounter;
+        AddHP();
+        AddHP();
+        AddHP();
+        Time.timeScale = 1;
+        ReliveMenu.SetActive(false);
+    }
+    void Skipped()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(1);
+    }
+
     void Invulnerability()
     {
         Shield.GetComponent<Shield>().TempTime = 0;

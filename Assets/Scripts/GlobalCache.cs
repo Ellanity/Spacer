@@ -1,7 +1,7 @@
 ﻿public class GlobalCache
 {
     public static GlobalCache Inst = new GlobalCache();
-    public int Gold = 123532465;
+    public int Gold = 0;
     public int Gems = 0;
 
     public int ShipTexture = 0;
