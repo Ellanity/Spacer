@@ -6,12 +6,10 @@ using UnityEngine.UI;
 
 public class Ship_Triggers : MonoBehaviour
 {
-    /// shop upgrades
-
-    
+    private int _liveUpgrade = GlobalCache.Inst.LivesUpgradeCount / 5;
 
 
-    [SerializeField] private int HealthPoints = 3;
+    [SerializeField] private int HealthPoints = 2;
     private GameObject Shield => transform.GetChild(2).gameObject; 
 
     [SerializeField] private Text LivesCounter;
@@ -59,7 +57,7 @@ public class Ship_Triggers : MonoBehaviour
 
     void AddHP()
     {
-        if(HealthPoints >= 3)
+        if(HealthPoints + _liveUpgrade >= 2)
             return;
         Lives[HealthPoints].SetActive(true);
         HealthPoints++;

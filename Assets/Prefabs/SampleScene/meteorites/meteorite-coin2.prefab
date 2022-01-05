@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1219171964270597348}
   - component: {fileID: -8472798459212791805}
   - component: {fileID: 3031044494128669185}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meteorite-coin2
   m_TagString: meteoritecoin
   m_Icon: {fileID: 0}
@@ -51,6 +51,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

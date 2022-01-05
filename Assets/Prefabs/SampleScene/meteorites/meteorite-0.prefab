@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3134218630084166987}
   - component: {fileID: -6707971088728651967}
   - component: {fileID: -7910832397569094365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meteorite-0
   m_TagString: meteorite
   m_Icon: {fileID: 0}
@@ -50,6 +50,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
