@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class ButtonPrefab : MonoBehaviour
 {
-    [SerializeField]
-    private List <Button> Buttons;
+    //[SerializeField]
+    //private List <Button> Buttons;
     [SerializeField]
     private List <Text> Texts;
-    [SerializeField]
-    private List <int> Prices;
+    //[SerializeField]
+    //private List <int> Prices;
     [SerializeField]
     private GameObject NotEnough;
 
@@ -18,6 +18,7 @@ public class ButtonPrefab : MonoBehaviour
     {
         CheckPurchased();
         GetComponent<CountMoney>().UpdateMoneyCounter();
+        //return;
         for(int i = 0; i < Texts.Count; i++)
         {
             int Check = 1<<i;
@@ -30,55 +31,44 @@ public class ButtonPrefab : MonoBehaviour
             }
         }
         Texts[GlobalCache.Inst.ShipTexture].text = "equipped";
-
-        Buttons[0].onClick.AddListener(delegate{PrefabClick0(0);});
-        Buttons[1].onClick.AddListener(delegate{PrefabClick0(1);});
-        Buttons[2].onClick.AddListener(delegate{PrefabClick0(2);});
-        Buttons[3].onClick.AddListener(delegate{PrefabClick0(3);});
-        Buttons[4].onClick.AddListener(delegate{PrefabClick0(4);});
-        Buttons[5].onClick.AddListener(delegate{PrefabClick0(5);});
     }
 
-    void PrefabClick0(int temp)
+    public void PrefabClick0(int number)
     {
-        int Check = 1<<temp;
+        int Check = 1<<number;
         int GlobalCheck = GlobalCache.Inst.ShipBought;
         int Result = Check&GlobalCheck;
         if(Result > 0)
         {
             Texts[GlobalCache.Inst.ShipTexture].text = "purchased";
-            GlobalCache.Inst.ShipTexture = temp;
-            Texts[temp].text = "equipped";
+            GlobalCache.Inst.ShipTexture = number;
+            Texts[number].text = "equipped";
         }
         else
         {
             int Coins = GlobalCache.Inst.Gold;
-            if(Coins > Prices[temp])
+            if(Coins >= GlobalCache.Inst.ShipPrices[number])
             {
                 GlobalCache.Inst.ShipBought += Check;
 
-                GlobalCache.Inst.Gold -= Prices[temp];
+                //Debug.Log(GlobalCache.Inst.Gold);
+                GlobalCache.Inst.Gold -= GlobalCache.Inst.ShipPrices[number];
                 GetComponent<CountMoney>().UpdateMoneyCounter();
+                Debug.Log(GlobalCache.Inst.Gold);
                 
                 
                 Texts[GlobalCache.Inst.ShipTexture].text = "purchased";
-                GlobalCache.Inst.ShipTexture = temp;
-                Texts[temp].color = Color.green;
-                Texts[temp].text = "equipped";
+                GlobalCache.Inst.ShipTexture = number;
+                Texts[number].color = Color.green;
+                Texts[number].text = "equipped";
             }
             else 
             {
                 NotEnough.GetComponent<NotEnough>().enabled = true;
-                NotEnough.GetComponent<NotEnough>().TempTime = 0f;
-                NotEnough.GetComponent<Text>().color = new Color(1,0,0,1);
+                NotEnough.GetComponent<NotEnough>().SetTrue();
             }
         }
-        QuickSaveWriter.Create("Player")
-            .Write("ShipBought", GlobalCache.Inst.ShipBought)
-            .Write("ShipTexture", GlobalCache.Inst.ShipTexture)
-            .Write("Coins", GlobalCache.Inst.Gold)
-            .Write("Gems", GlobalCache.Inst.Gems)
-            .Commit();
+        GlobalCache.Inst.SaveData();
         
     }
     void CheckPurchased()

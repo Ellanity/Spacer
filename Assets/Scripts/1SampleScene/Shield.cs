@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
-    public float TempTime;
+    [HideInInspector] public float TempTime;
+    private float baseTime = 3f;
 
-    void Update()
+    private void Update()
     {
         TempTime += Time.deltaTime;
-        if(TempTime > 3)
+        if(TempTime > baseTime)
             SetInactive();
     }
-    void SetInactive()
+    private void SetInactive()
     {
         gameObject.SetActive(false);
     }

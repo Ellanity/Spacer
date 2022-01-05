@@ -6,21 +6,21 @@ using UnityEngine.UI;
 
 public class Ship_Triggers : MonoBehaviour
 {
-    [SerializeField]
-    private int HealthPoints = 3;
+    /// shop upgrades
+
+    
+
+
+    [SerializeField] private int HealthPoints = 3;
     private GameObject Shield => transform.GetChild(2).gameObject; 
 
-    [SerializeField]
-    private Text LivesCounter;
+    [SerializeField] private Text LivesCounter;
     
-    [SerializeField]
-    private Stats _Stats;
+    [SerializeField] private Stats _Stats;
 
-    [SerializeField]
-    private Score _Score;
+    [SerializeField] private Score _Score;
 
-    [SerializeField]
-    private List<GameObject> Lives;
+    [SerializeField] private List<GameObject> Lives;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "bonus_hp")
@@ -80,18 +80,12 @@ public class Ship_Triggers : MonoBehaviour
             //SceneManager.LoadScene(1);
         }
     }
-    [SerializeField]
-    private GameObject ReliveMenu;
-    [SerializeField]
-    private Button _skip;
-    [SerializeField]
-    private Button _gems;
-    [SerializeField]
-    private Button _adds;
-    [SerializeField]
-    private Text _gemsText;
-    [SerializeField]
-    private Text _gemsPrice;
+    [SerializeField] private GameObject ReliveMenu;
+    [SerializeField] private Button _skip;
+    [SerializeField] private Button _gems;
+    [SerializeField] private Button _adds;
+    [SerializeField] private Text _gemsText;
+    [SerializeField] private Text _gemsPrice;
     private int _respawnCounter = 2;
     private int _respawnPrice = 25;
     void Relive()

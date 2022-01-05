@@ -20,7 +20,10 @@ public class BossTriggers : MonoBehaviour
             BossHp--;
             SliderBoss.GetComponent<HPBossSlider>().AddHealth(-1);
             if(BossHp <= 0)
+            {
+                GetComponent<GemSpawner>().SpawnMoney();
                 BossDestroy();
+            }
             Destroy(other.gameObject); 
         }
     }

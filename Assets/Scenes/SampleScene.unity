@@ -11311,7 +11311,7 @@ GameObject:
   - component: {fileID: 1124835811}
   - component: {fileID: 1124835816}
   - component: {fileID: 1124835817}
-  - component: {fileID: 1124835818}
+  - component: {fileID: 1124835815}
   m_Layer: 0
   m_Name: ship
   m_TagString: Player
@@ -11428,6 +11428,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.06090306, y: -0.17015651}
   m_Size: {x: 4.6928496, y: 2.919821}
   m_Direction: 1
+--- !u!114 &1124835815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124835810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14431d80c7088264992951c0c5a2daec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1124835816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11457,25 +11469,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Delay: 0.5
   Bullet: {fileID: 8858530766484216560, guid: f3ec73fe8daafe84f8fb525ee1881cb7, type: 3}
---- !u!114 &1124835818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124835810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7647bb0e23ae8484c9fe44abd185321b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Materials:
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.28235295, g: 1, b: 0, a: 1}
-  - {r: 1, g: 0.8313726, b: 0, a: 1}
-  - {r: 0, g: 0.16862746, b: 1, a: 1}
-  - {r: 1, g: 0, b: 0.6862745, a: 1}
 --- !u!1 &1147194967
 GameObject:
   m_ObjectHideFlags: 0
