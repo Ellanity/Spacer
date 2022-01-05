@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4225322140917270892
+--- !u!1 &9012693352349086845
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8560022274554927157}
-  - component: {fileID: 4622051873855282737}
-  - component: {fileID: 4830242853802025614}
-  - component: {fileID: 3134218630084166987}
-  - component: {fileID: -6707971088728651967}
-  - component: {fileID: -7910832397569094365}
-  m_Layer: 0
-  m_Name: meteorite-0
-  m_TagString: meteorite
+  - component: {fileID: 5759056848201413347}
+  - component: {fileID: 3388688959997717094}
+  - component: {fileID: 2274223594368010039}
+  - component: {fileID: 6763121182139240358}
+  - component: {fileID: 1219171964270597348}
+  - component: {fileID: -8472798459212791805}
+  - component: {fileID: 3031044494128669185}
+  m_Layer: 7
+  m_Name: meteorite-coin2
+  m_TagString: meteoritecoin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8560022274554927157
+--- !u!4 &5759056848201413347
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4225322140917270892}
+  m_GameObject: {fileID: 9012693352349086845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,13 +36,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4622051873855282737
+--- !u!212 &3388688959997717094
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4225322140917270892}
+  m_GameObject: {fileID: 9012693352349086845}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -50,6 +51,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -74,41 +76,41 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: fd3842a9161cec446ad12d85495ed9d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 68f462de22cc24d46b4ca58b21401f15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8, y: 0.85}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &4830242853802025614
+--- !u!58 &2274223594368010039
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4225322140917270892}
+  m_GameObject: {fileID: 9012693352349086845}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023725271, y: 0.009058833}
+  m_Offset: {x: -0.024020433, y: -0.015506625}
   serializedVersion: 2
-  m_Radius: 0.970955
---- !u!50 &3134218630084166987
+  m_Radius: 1.153714
+--- !u!50 &6763121182139240358
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4225322140917270892}
+  m_GameObject: {fileID: 9012693352349086845}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -122,13 +124,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-6707971088728651967
+--- !u!114 &1219171964270597348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4225322140917270892}
+  m_GameObject: {fileID: 9012693352349086845}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 960827f6249bde74d97de524fd1524b6, type: 3}
@@ -168,15 +170,32 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   speed: 35
---- !u!114 &-7910832397569094365
+--- !u!114 &-8472798459212791805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4225322140917270892}
+  m_GameObject: {fileID: 9012693352349086845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a066fe9d96de840a21fe3d44594c39, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e4a63b840dbc44458a1671c0ca1081f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyPrefab: {fileID: 2879504064085654812, guid: 211638f2df5fdd040842f2396cdc53cc,
+    type: 3}
+  _chanceToSpawnMoney: 100
+  _minMoneyCount: 3
+  _maxMoneyCount: 7
+--- !u!114 &3031044494128669185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012693352349086845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bccde487d5bb3e547b27ab0576074024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

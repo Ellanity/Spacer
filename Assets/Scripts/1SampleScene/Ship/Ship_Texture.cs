@@ -5,12 +5,12 @@ using UnityEngine;
 public class Ship_Texture : MonoBehaviour
 {
     [SerializeField]
-    private List<Sprite> Textures;
-    private SpriteRenderer Main => GetComponent<SpriteRenderer>();
+    private List<Color> Materials;
+    private Material _main => GetComponent<Renderer>().material;
 
 
     void Start()
     {
-        Main.sprite = Textures[GlobalCache.Inst.ShipTexture];
+        _main.color = Materials[GlobalCache.Inst.ShipTexture];
     }
 }

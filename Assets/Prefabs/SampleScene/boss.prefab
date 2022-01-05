@@ -49,6 +49,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -182,6 +183,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -328,6 +330,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -493,9 +496,9 @@ GameObject:
   - component: {fileID: 4348940867029779903}
   - component: {fileID: 4348940867029779896}
   - component: {fileID: 1089888626229999479}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: generator (3)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -529,6 +532,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -554,7 +558,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 670232bab42f7e04fafd58ed9aa10a26, type: 3}
-  m_Color: {r: 0.27749938, g: 0.9056604, b: 0, a: 1}
+  m_Color: {r: 0.45400003, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -652,9 +656,10 @@ GameObject:
   - component: {fileID: 4348940867427001384}
   - component: {fileID: 4348940867427001385}
   - component: {fileID: 4348940867427001391}
-  m_Layer: 0
+  - component: {fileID: 6579972912864969660}
+  m_Layer: 7
   m_Name: boss
-  m_TagString: ray
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -694,6 +699,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -717,7 +723,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: eae7fcacc8fa9f348b13df90884f405b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -776,6 +782,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BossHp: 25
   SliderBoss: {fileID: 0}
+--- !u!114 &6579972912864969660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4348940867427001380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f929fde00b617fe4ebfb5fdc180229e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyPrefab: {fileID: 1830675283400903929, guid: 8e85706e88870ef4888688fd263433c4,
+    type: 3}
+  _chanceToSpawnMoney: 100
+  _minMoneyCount: 1
+  _maxMoneyCount: 4
 --- !u!1 &4348940867510798656
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +848,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -935,9 +959,9 @@ GameObject:
   - component: {fileID: 4348940867524035543}
   - component: {fileID: 4348940867524035536}
   - component: {fileID: 3041931949791874426}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: generator (1)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -971,6 +995,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -996,7 +1021,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 670232bab42f7e04fafd58ed9aa10a26, type: 3}
-  m_Color: {r: 0.27749938, g: 0.9056604, b: 0, a: 1}
+  m_Color: {r: 0.45400003, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1094,9 +1119,9 @@ GameObject:
   - component: {fileID: 4348940867804177168}
   - component: {fileID: 2658831772611083538}
   - component: {fileID: 4348940867804177170}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: generator
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1130,6 +1155,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1155,7 +1181,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 670232bab42f7e04fafd58ed9aa10a26, type: 3}
-  m_Color: {r: 0.27749938, g: 0.9056604, b: 0, a: 1}
+  m_Color: {r: 0.45400003, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1238,9 +1264,9 @@ GameObject:
   - component: {fileID: 4348940867831867788}
   - component: {fileID: 4348940867831867789}
   - component: {fileID: 2094338166112058832}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: generator (2)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1274,6 +1300,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1299,7 +1326,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 670232bab42f7e04fafd58ed9aa10a26, type: 3}
-  m_Color: {r: 0.27749938, g: 0.9056604, b: 0, a: 1}
+  m_Color: {r: 0.45400003, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1433,6 +1460,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

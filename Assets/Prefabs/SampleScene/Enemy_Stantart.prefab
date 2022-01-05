@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4843193001342938365}
   - component: {fileID: 2440538522546775762}
   - component: {fileID: 1817637534494327144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_Stantart
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -53,6 +53,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -372,8 +373,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6851147004211062056, guid: 0c3d3bae2ab6a014d934ffbbca206370,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851147004211062056, guid: 0c3d3bae2ab6a014d934ffbbca206370,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851147004211062056, guid: 0c3d3bae2ab6a014d934ffbbca206370,
+        type: 3}
+      propertyPath: m_TagString
+      value: shield
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c3d3bae2ab6a014d934ffbbca206370, type: 3}

@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
-    public float TempTime;
-
-    void Update()
+    [HideInInspector] public float TempTime;
+    private float baseTime = 3f;
+    private float _shieldUpgrade = GlobalCache.Inst.ShieldUpgradeCount * 0.2f;
+    private void Start() 
+    {
+        if(transform.parent.tag != "Player")    
+            _shieldUpgrade = 0;
+    }
+    private void Update()
     {
         TempTime += Time.deltaTime;
-        if(TempTime > 3)
+        if(TempTime > baseTime)
             SetInactive();
     }
-    void SetInactive()
+    private void SetInactive()
     {
         gameObject.SetActive(false);
     }
