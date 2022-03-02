@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class Events : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _MeteoriteGenerator;
-    [SerializeField]
-    private GameObject _EnemyGenerator;
-    [SerializeField]
-    private GameObject _BossGenerator;
+    public GameObject _MeteoriteGenerator;
+    public GameObject _EnemyGenerator;
+    public GameObject _BossGenerator;
 
     [SerializeField]
     private GameObject _MeteoriteText;
@@ -18,9 +15,9 @@ public class Events : MonoBehaviour
     [SerializeField]
     private GameObject _BossText;
 
-    private float TempTime = 0;
+    [HideInInspector] public float TempTime = 0;
     private float GlobalTime => GetComponent<GlobalTime>().time;
-    private float delay = 3f;
+    [HideInInspector] public float delay = 3f;
 
     private int flag = -1;
 
@@ -41,9 +38,9 @@ public class Events : MonoBehaviour
             if(GlobalTime < BossTimeTrigger)
                 maxValue = 84;
             flag = Random.Range(0, maxValue);
-            //flag = 90;// для теста босса
-            //flag = 40;// для теста метеоритов
-            //flag = 80;// для теста врагов
+            //flag = 90;// debug boss
+            //flag = 40;// debug meteorites
+            //flag = 80;// debug enemies
             //Debug.Log(flag);
             StartEvent(flag);
         }

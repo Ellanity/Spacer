@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class LaserRay : MonoBehaviour
 {
-    public float startAngle;
-    public float DirectionZ = 1f;
-    void FixedUpdate()
-    {
-        transform.Rotate(0,0,DirectionZ);
-        float curAngle = transform.rotation.eulerAngles.z;
-        //Debug.Log(startAngle.ToString() + "\n" + curAngle.ToString());
-        if(startAngle == 270 && 92 >= curAngle && curAngle >= 88)
+    public float _temp;
+    private void Update() {
+        _temp -= Time.deltaTime;
+        if(_temp < 0)
             gameObject.SetActive(false);
-        if(startAngle == 90 && 268 <= curAngle && curAngle <= 272)
-            gameObject.SetActive(false);    
-    }
+    }    
 }

@@ -1,4 +1,4 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,6 +19,13 @@ public class Ship_Triggers : MonoBehaviour
     [SerializeField] private Score _Score;
 
     [SerializeField] private List<GameObject> Lives;
+    private void Start()
+    {
+        HealthPoints = HealthPoints + _liveUpgrade;
+        for(int i = 0; i < HealthPoints; i++)
+            Lives[i].SetActive(true);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "bonus_hp")
@@ -78,6 +85,8 @@ public class Ship_Triggers : MonoBehaviour
             //SceneManager.LoadScene(1);
         }
     }
+    
+    [SerializeField] private GameObject _parent;
     [SerializeField] private GameObject ReliveMenu;
     [SerializeField] private Button _skip;
     [SerializeField] private Button _gems;
@@ -86,18 +95,27 @@ public class Ship_Triggers : MonoBehaviour
     [SerializeField] private Text _gemsPrice;
     private int _respawnCounter = 2;
     private int _respawnPrice = 25;
+    [SerializeField] private Events _events;
     void Relive()
     {
         Time.timeScale = 0;
+        foreach (Transform child in _parent.transform)
+            GameObject.Destroy(child.gameObject);
+            //Debug.Log(_parent.transform.childCount);
+        _events.TempTime = 0;
+        _events._BossGenerator.SetActive(false);
+        _events._EnemyGenerator.SetActive(false);
+        _events._MeteoriteGenerator.SetActive(false);
+        _events.delay = 5f;
         ReliveMenu.SetActive(true);
         _gemsPrice.text = "Pay : " + _respawnPrice.ToString() + " Gems";
         //_respawnPrice *= _respawnCounter;
         _gemsText.text = GlobalCache.Inst.Gems.ToString();
-        _skip.onClick.AddListener(Skipped);
-        _gems.onClick.AddListener(Payed);
+        //_skip.onClick.AddListener(Skipped);
+        //_gems.onClick.AddListener(Payed);
         //_adds.onClick.AddListener(Payed);
     }
-    void Payed()
+    public void Payed()
     {
         if(GlobalCache.Inst.Gems < _respawnPrice)
             return;
@@ -109,12 +127,11 @@ public class Ship_Triggers : MonoBehaviour
         Time.timeScale = 1;
         ReliveMenu.SetActive(false);
     }
-    void Skipped()
+    public void Skipped()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
-
     void Invulnerability()
     {
         Shield.GetComponent<Shield>().TempTime = 0;

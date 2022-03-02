@@ -1,5 +1,4 @@
-﻿using CI.QuickSave;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +15,6 @@ public class ButtonPrefab : MonoBehaviour
 
     void Start()
     {
-        CheckPurchased();
         GetComponent<CountMoney>().UpdateMoneyCounter();
         //return;
         for(int i = 0; i < Texts.Count; i++)
@@ -54,7 +52,7 @@ public class ButtonPrefab : MonoBehaviour
                 //Debug.Log(GlobalCache.Inst.Gold);
                 GlobalCache.Inst.Gold -= GlobalCache.Inst.ShipPrices[number];
                 GetComponent<CountMoney>().UpdateMoneyCounter();
-                Debug.Log(GlobalCache.Inst.Gold);
+                //Debug.Log(GlobalCache.Inst.Gold);
                 
                 
                 Texts[GlobalCache.Inst.ShipTexture].text = "purchased";
@@ -71,16 +69,4 @@ public class ButtonPrefab : MonoBehaviour
         GlobalCache.Inst.SaveData();
         
     }
-    void CheckPurchased()
-    {
-        int result = 0;
-        QuickSaveReader.Create("Player").TryRead<int>("ShipBought", out result);
-        //Debug.Log(result);
-        if(result > 0)
-        {
-            QuickSaveReader.Create("Player").Read<int>("ShipBought", r => GlobalCache.Inst.ShipBought = r);
-            QuickSaveReader.Create("Player").Read<int>("ShipTexture", r => GlobalCache.Inst.ShipTexture = r);
-        }
-    }
-    
 }

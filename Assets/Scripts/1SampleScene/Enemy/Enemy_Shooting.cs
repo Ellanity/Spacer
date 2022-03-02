@@ -15,6 +15,7 @@ public class Enemy_Shooting : MonoBehaviour
     private float MaxDelay;
     private float Delay = 3;
     private float Speed = 100;
+    private Transform _parent => GameObject.Find("PoAO").transform;
 
     public void EnemyShoot()
     {
@@ -25,5 +26,6 @@ public class Enemy_Shooting : MonoBehaviour
         Vector3 PlayerPosition = Player.transform.position;
         Vector3 Direction = PlayerPosition - transform.position;
         newBullet.GetComponent<Rigidbody2D>().AddForce(Direction * Speed);
+        newBullet.transform.parent = _parent;
     }
 }

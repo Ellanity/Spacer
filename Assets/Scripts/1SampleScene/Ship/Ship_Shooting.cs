@@ -27,7 +27,7 @@ public class Ship_Shooting : MonoBehaviour
         float _attackRange = Vector2.Distance(transform.position, Vector2.zero) / 4 * 3;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, _direction, _attackRange, layerMask);
-        Debug.DrawRay(transform.position, _direction * _attackRange, Color.yellow);
+        //Debug.DrawRay(transform.position, _direction * _attackRange, Color.yellow);
 
         if(!hit)
             return;
@@ -35,7 +35,7 @@ public class Ship_Shooting : MonoBehaviour
         string cur = hit.transform.gameObject.tag; 
         for(int i = 0; i < _targetList.Count; i++)
         {
-            Debug.Log(cur + " " + _targetList[i]);
+            //Debug.Log(cur + " " + _targetList[i]);
             if(_tempTime > _delay - _upgradeTime && _targetList[i] == cur)
             {
                 _tempTime = 0;

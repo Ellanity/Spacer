@@ -17,11 +17,12 @@ public class Buttons : MonoBehaviour
 
 
     void Start()
-    {
+    {   
         _Start.onClick.AddListener(_StartClick);
         _Settings.onClick.AddListener(_SettingsClick);
-        _Exit.onClick.AddListener(_ExitClick);
+        //_Exit.onClick.AddListener(_ExitClick);
         _Shop.onClick.AddListener(_ShopClick);
+        //Debug.Log(Application.persistentDataPath);
     }
 
     void _StartClick()
@@ -31,16 +32,18 @@ public class Buttons : MonoBehaviour
 
     void _SettingsClick()
     {
+        //GlobalCache.Inst.SaveData();
         SceneManager.LoadScene("Settings");
     }
 
-    void _ExitClick()
+    /*void _ExitClick()
     {
         Application.Quit();
-    }
+    }*/
 
     void _ShopClick()
     {
+        //GlobalCache.Inst.LoadData();
         SceneManager.LoadScene("Shop");
     }
 }

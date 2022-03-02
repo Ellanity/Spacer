@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GeneratorCounter : MonoBehaviour
 {
-    public int counter = 4;
+    private int counter = 3;
     [SerializeField]
     private GameObject BossShield => transform.parent.GetChild(0).gameObject;
     private float TempTime = 0f;
@@ -22,11 +22,11 @@ public class GeneratorCounter : MonoBehaviour
     private void ActivateShield()
     {
         BossShield.SetActive(true);
-        counter = 4;
+        counter = 3;
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(1).gameObject.SetActive(true);
         transform.GetChild(2).gameObject.SetActive(true);
-        transform.GetChild(3).gameObject.SetActive(true);
+        //transform.GetChild(3).gameObject.SetActive(true);
     }
     void Update()
     {

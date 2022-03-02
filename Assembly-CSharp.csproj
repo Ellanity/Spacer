@@ -36,72 +36,54 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\QuickSave\QuickSaveBase.cs" />
-     <Compile Include="Assets\QuickSave\QuickSaveWriter.cs" />
      <Compile Include="Assets\Scripts\GlobalCache.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\BossShield.cs" />
      <Compile Include="Assets\Scripts\MainMenu\ShipMovement.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\BulletT1.cs" />
-     <Compile Include="Assets\QuickSave\Core\Settings\Cryptography.cs" />
+     <Compile Include="Assets\Scripts\Shop\ColorManager.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Meteorite\MeteoriteMoneyTriggers.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Money\GemSpawner.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Money\MoneySpawner.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Money\GemsFlyToCollect.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Enemy\Enemy_Trigger.cs" />
-     <Compile Include="Assets\QuickSave\Core\Converters\SpriteConverter.cs" />
      <Compile Include="Assets\Scripts\MainMenu\PlanetAnimation.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenuMoney.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Generators\BossGenerator.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Generators\EnemyGenerator.cs" />
-     <Compile Include="Assets\QuickSave\SecurityMode.cs" />
-     <Compile Include="Assets\QuickSave\Core\Converters\Vector2Converter.cs" />
-     <Compile Include="Assets\QuickSave\QuickSaveRaw.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Money\MoneyFlyToCollect.cs" />
-     <Compile Include="Assets\QuickSave\QuickSaveGlobalSettings.cs" />
-     <Compile Include="Assets\Scripts\1SampleScene\Generators\CoinGenerator.cs" />
-     <Compile Include="Assets\QuickSave\QuickSaveException.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Star.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\HPBossSlider.cs" />
-     <Compile Include="Assets\QuickSave\Core\Converters\QuaternionConverter.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Ship\Ship_Movement.cs" />
-     <Compile Include="Assets\Scripts\1SampleScene\UI\ReliveMenu.cs" />
      <Compile Include="Assets\Scripts\Settings\ExitToMainMenu.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\LaserRay.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Respawn.cs" />
      <Compile Include="Assets\Scripts\Shop\NotEnough.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Shield.cs" />
-     <Compile Include="Assets\QuickSave\Core\Storage\FileAccess.cs" />
-     <Compile Include="Assets\QuickSave\Core\Converters\Vector4Converter.cs" />
      <Compile Include="Assets\Scripts\Shop\CountMoney.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\GlobalTime.cs" />
-     <Compile Include="Assets\QuickSave\QuickSaveSettings.cs" />
+     <Compile Include="Assets\Scripts\Shop\Upgrades\WeaponUpgradeButton.cs" />
+     <Compile Include="Assets\Scripts\Shop\Upgrades\ShieldUpgradeButton.cs" />
      <Compile Include="Assets\Scripts\GameOver\ScoreShower.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\Generator.cs" />
-     <Compile Include="Assets\QuickSave\QuickSaveReader.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Enemy\Enemy_Shooting.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\GeneratorCounter.cs" />
-     <Compile Include="Assets\QuickSave\Core\Converters\Texture2DConverter.cs" />
+     <Compile Include="Assets\Scripts\Shop\Upgrades\LivesUpgradeButton.cs" />
      <Compile Include="Assets\Scripts\Shop\ReturnToMainMenu.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Bullet.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Enemy\Enemy_Movement.cs" />
      <Compile Include="Assets\Scripts\Shop\ButtonPrefab.cs" />
-     <Compile Include="Assets\QuickSave\Core\Converters\ColorConverter.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Buttons.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Generators\StarGenerator.cs" />
-     <Compile Include="Assets\QuickSave\Core\Serialisers\JsonSerialiser.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\BossAttack.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Generators\BonusGenerator.cs" />
      <Compile Include="Assets\Scripts\GameOver\Exit.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MaterialLoader.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\BossTriggers.cs" />
-     <Compile Include="Assets\QuickSave\Core\Converters\Vector3Converter.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Ship\Ship_Triggers.cs" />
-     <Compile Include="Assets\QuickSave\Core\Converters\Matrix4x4Converter.cs" />
-     <Compile Include="Assets\Scripts\1SampleScene\Generators\GemGenerator.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Ship\Ship_Shooting.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Stats.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\BulletT2.cs" />
-     <Compile Include="Assets\QuickSave\Core\Settings\Compression.cs" />
+     <Compile Include="Assets\Scripts\Shop\ScrollSize.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Meteorite\Meteorite.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Bonus.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Generators\MeteoriteGenerator.cs" />
@@ -109,17 +91,8 @@
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Meteorite\MeteoriteTriggers.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Ship_Texture1.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\UI\Score.cs" />
-     <Compile Include="Assets\QuickSave\CompressionMode.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Events.cs" />
-     <Compile Include="Assets\Scripts\Shop\ScrollSize.cs" />
-     <Compile Include="Assets\Scripts\Shop\Upgrades\ShieldUpgradeButton.cs" />
-     <Compile Include="Assets\Scripts\Shop\Upgrades\LivesUpgradeButton.cs" />
-     <Compile Include="Assets\Scripts\Shop\Upgrades\WeaponUpgradeButton.cs" />
-     <None Include="Assets\QuickSave\Plugins\jillejr.newtonsoft.json-for-unity@12.0.301\Plugins\Newtonsoft.Json Portable\Newtonsoft.Json.xml" />
-     <None Include="Assets\QuickSave\Plugins\jillejr.newtonsoft.json-for-unity@12.0.301\Plugins\Newtonsoft.Json AOT\Newtonsoft.Json.xml" />
-     <None Include="Assets\QuickSave\Plugins\jillejr.newtonsoft.json-for-unity@12.0.301\Plugins\Newtonsoft.Json Editor\Newtonsoft.Json.xml" />
-     <None Include="Assets\QuickSave\Plugins\jillejr.newtonsoft.json-for-unity@12.0.301\link.xml" />
-     <None Include="Assets\QuickSave\readme.txt" />
+     <Compile Include="Assets\Scripts\1SampleScene\Boss\BossRotation.cs" />
     <Reference Include="UnityEngine">
         <HintPath>E:/Gamedev/Unity/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -332,9 +305,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>E:/Gamedev/Unity/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-        <HintPath>E:/git projects/spacer/Assets/QuickSave/Plugins/jillejr.newtonsoft.json-for-unity@12.0.301/Plugins/Newtonsoft.Json Editor/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>E:/Gamedev/Unity/2020.3.18f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

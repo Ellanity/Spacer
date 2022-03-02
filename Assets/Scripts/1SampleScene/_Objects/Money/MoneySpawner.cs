@@ -16,6 +16,7 @@ public class MoneySpawner : MonoBehaviour
     private int _minMoneyCount = 0;
     [SerializeField]
     private int _maxMoneyCount = 0;
+    private Transform _parent => GameObject.Find("PoAO").transform;
     public void SpawnMoney()
     {   
         int Proc = Random.Range(0,99999999) % 100;
@@ -33,6 +34,7 @@ public class MoneySpawner : MonoBehaviour
             newMFTC._target = _target;
             newMFTC._spawnPoint = transform.position;
             newMFTC._moneyContainer = _moneyStats;
+            newMFTC.transform.parent = _parent;
         }
     }
 }

@@ -6,8 +6,10 @@ public class BossGenerator : MonoBehaviour
 {
     [SerializeField]
     private GameObject Prefab;
+    [SerializeField] Transform _parent;
     public void SpawnBoss()
     {
-        Instantiate(Prefab);
+        GameObject _new = Instantiate(Prefab);
+        _new.transform.parent = _parent;
     }
 }
