@@ -6,19 +6,19 @@ public class BossTriggers : MonoBehaviour
 {
     [SerializeField]
     public int BossHp = 25;
-    public GameObject SliderBoss;
+    //public GameObject SliderBoss;
     void Start()
     {
-        SliderBoss = GameObject.FindWithTag("SliderHp");
+        //SliderBoss = GameObject.FindWithTag("SliderHp");
         //SliderBoss.SetActive(true);
-        SliderBoss.GetComponent<HPBossSlider>().SetMaxHealth(BossHp);
+        //SliderBoss.GetComponent<HPBossSlider>().SetMaxHealth(BossHp);
     }
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "bullet")
         {
             BossHp--;
-            SliderBoss.GetComponent<HPBossSlider>().AddHealth(-1);
+            //SliderBoss.GetComponent<HPBossSlider>().AddHealth(-1);
             if(BossHp <= 0)
             {
                 GetComponent<GemSpawner>().SpawnMoney();

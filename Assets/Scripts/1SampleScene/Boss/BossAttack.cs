@@ -29,6 +29,7 @@ public class BossAttack : MonoBehaviour
         {
             AttackDelay = 5f;
             PrevTypeAttack = 0;
+            FindObjectOfType<AudioManager>().Play("Laser");
             RayAttack();
         }
         else if(TypeAttack == 1 && PrevTypeAttack != 1)

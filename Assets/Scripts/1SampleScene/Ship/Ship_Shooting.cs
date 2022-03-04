@@ -12,8 +12,8 @@ public class Ship_Shooting : MonoBehaviour
     void Update()
     {
         _tempTime += Time.deltaTime;
-        if(Input.GetAxis("Fire1") != 0)
-            Shoot();
+        //if(Input.GetAxis("Fire1") != 0)
+        //    Shoot();
         Shoot();
     }
     [SerializeField] private List <string> _targetList;
@@ -33,6 +33,8 @@ public class Ship_Shooting : MonoBehaviour
             return;
 
         string cur = hit.transform.gameObject.tag; 
+        if(cur == "shield")
+            return;
         for(int i = 0; i < _targetList.Count; i++)
         {
             //Debug.Log(cur + " " + _targetList[i]);

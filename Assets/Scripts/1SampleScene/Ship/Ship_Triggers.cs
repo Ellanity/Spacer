@@ -30,10 +30,12 @@ public class Ship_Triggers : MonoBehaviour
     {
         if (other.tag == "bonus_hp")
         {
+            FindObjectOfType<AudioManager>().Play("BonusUp");
             AddHP();
         }
         if (other.tag == "bonus_shield")
         {
+            FindObjectOfType<AudioManager>().Play("BonusUp");
             Invulnerability();
         }
         if(other.tag == "coin")
@@ -48,11 +50,14 @@ public class Ship_Triggers : MonoBehaviour
         {
             other.GetComponent<MoneySpawner>().SpawnMoney();
         }
-        if ((other.tag == "meteorite" || other.tag == "meteoritecoin" || other.tag == "enemy" || other.tag == "enemy_bullet" || other.tag == "ray") && (!Shield.activeSelf))
+        if (other.tag == "meteorite" || other.tag == "meteoritecoin" || other.tag == "enemy" || other.tag == "enemy_bullet" || other.tag == "ray")
         {
             FindObjectOfType<AudioManager>().Play("LittleBoom");
-            RemoveHP();
-            Invulnerability();
+            if(!Shield.activeSelf)
+            {    
+                RemoveHP();
+                Invulnerability();
+            }
         }
         if(other.tag == "bullet")
             return;

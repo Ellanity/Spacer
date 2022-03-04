@@ -715,13 +715,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: LittleBoom
     clip: {fileID: 8300000, guid: c58baa985edf9fb4cac2d7fb87d9ca38, type: 3}
-    volume: 1
-    pitch: 1
+    volume: 0.814
+    pitch: 1.22
     loop: 0
     source: {fileID: 0}
   - name: BossBoom
     clip: {fileID: 8300000, guid: 61c5fcf4986a29541be5c178c39ddc5f, type: 3}
-    volume: 1
+    volume: 0.577
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -730,6 +730,18 @@ MonoBehaviour:
     volume: 0.25
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: BonusUp
+    clip: {fileID: 8300000, guid: ef18346532428884da679e3012a27578, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Laser
+    clip: {fileID: 8300000, guid: 98cc875443519354897178e308996dbe, type: 3}
+    volume: 0.399
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &320291254
 Transform:
