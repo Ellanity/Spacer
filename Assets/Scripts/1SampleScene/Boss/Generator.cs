@@ -11,6 +11,7 @@ public class Generator : MonoBehaviour
         {
             _GM.MinusCounter(); 
             Destroy(other.gameObject); 
+            FindObjectOfType<AudioManager>().Play("LittleBoom");
             gameObject.SetActive(false);
         }
     }

@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Money\MoneyFlyToCollect.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Star.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\HPBossSlider.cs" />
+     <Compile Include="Assets\Scripts\1SampleScene\Boss\BossRotation.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Ship\Ship_Movement.cs" />
      <Compile Include="Assets\Scripts\Settings\ExitToMainMenu.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\LaserRay.cs" />
@@ -92,7 +93,8 @@
      <Compile Include="Assets\Scripts\MainMenu\Ship_Texture1.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\UI\Score.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Events.cs" />
-     <Compile Include="Assets\Scripts\1SampleScene\Boss\BossRotation.cs" />
+     <Compile Include="Assets\Audio\Scripts\Sound.cs" />
+     <Compile Include="Assets\Audio\Scripts\AudioManager.cs" />
     <Reference Include="UnityEngine">
         <HintPath>E:/Gamedev/Unity/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

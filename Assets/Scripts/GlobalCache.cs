@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GlobalCache//: MonoBehaviour
 {
     public static GlobalCache Inst = new GlobalCache();
-    public int Gold = 0;
+    public int Gold = 150;
     public int Gems = 0;
     
     public int Score = 0;

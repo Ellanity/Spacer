@@ -19,6 +19,7 @@ public class Enemy_Shooting : MonoBehaviour
 
     public void EnemyShoot()
     {
+        FindObjectOfType<AudioManager>().Play("Shoot1");
         Delay = Random.Range(MinDelay, MaxDelay);
         TempTime = 0;
         GameObject newBullet = Instantiate(Prefab);

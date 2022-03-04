@@ -38,6 +38,7 @@ public class Ship_Shooting : MonoBehaviour
             //Debug.Log(cur + " " + _targetList[i]);
             if(_tempTime > _delay - _upgradeTime && _targetList[i] == cur)
             {
+                FindObjectOfType<AudioManager>().Play("PlayerShoot");
                 _tempTime = 0;
                 GameObject NewBullet = Instantiate(Bullet);
                 NewBullet.transform.position = transform.position;

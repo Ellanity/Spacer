@@ -50,6 +50,7 @@ public class Ship_Triggers : MonoBehaviour
         }
         if ((other.tag == "meteorite" || other.tag == "meteoritecoin" || other.tag == "enemy" || other.tag == "enemy_bullet" || other.tag == "ray") && (!Shield.activeSelf))
         {
+            FindObjectOfType<AudioManager>().Play("LittleBoom");
             RemoveHP();
             Invulnerability();
         }

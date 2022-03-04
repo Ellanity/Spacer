@@ -31,6 +31,7 @@ public class BossTriggers : MonoBehaviour
     {
         GlobalCache.Inst.BossDefeated = true;
         //SliderBoss.SetActive(false);
+        FindObjectOfType<AudioManager>().Play("BossBoom");
         Destroy(gameObject);
     }
 }

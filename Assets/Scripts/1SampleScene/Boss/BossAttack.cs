@@ -35,12 +35,14 @@ public class BossAttack : MonoBehaviour
         {
             AttackDelay = 1f;
             PrevTypeAttack = 1;
+            FindObjectOfType<AudioManager>().Play("Shoot2");
             ShootAttack();
         }
         else if(TypeAttack == 2 && PrevTypeAttack != 2)
         {
             AttackDelay = 2f;
             PrevTypeAttack = 2;
+            FindObjectOfType<AudioManager>().Play("BossAttackBehind");
             BehindBlades();
         }
         else

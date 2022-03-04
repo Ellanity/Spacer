@@ -5226,7 +5226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &178231422
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5370,7 +5370,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 198996321}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1124835811}
+        m_TargetAssemblyTypeName: Ship_Triggers, Assembly-CSharp
+        m_MethodName: Payed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &198996321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5491,7 +5503,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 208476626}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1124835811}
+        m_TargetAssemblyTypeName: Ship_Triggers, Assembly-CSharp
+        m_MethodName: Skipped
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &208476626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10909,7 +10933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 840143376}
   m_Layer: 0
-  m_Name: PoAB
+  m_Name: PoAO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11294,7 +11318,7 @@ GameObject:
   - component: {fileID: 1124835811}
   - component: {fileID: 1124835816}
   - component: {fileID: 1124835817}
-  - component: {fileID: 1124835815}
+  - component: {fileID: 1124835814}
   m_Layer: 8
   m_Name: ship
   m_TagString: Player
@@ -11330,7 +11354,7 @@ MonoBehaviour:
   _adds: {fileID: 1594895530}
   _gemsText: {fileID: 1990385423}
   _gemsPrice: {fileID: 2110228626}
-  _events: {fileID: 0}
+  _events: {fileID: 126438866}
 --- !u!212 &1124835812
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11399,7 +11423,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1124835815
+--- !u!114 &1124835814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

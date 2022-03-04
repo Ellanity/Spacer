@@ -9,6 +9,7 @@ public class MeteoriteMoneyTriggers : MonoBehaviour
         if(other.tag == "bullet")
         {
             GetComponent<MoneySpawner>().SpawnMoney();
+            FindObjectOfType<AudioManager>().Play("LittleBoom");
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
