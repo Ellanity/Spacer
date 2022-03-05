@@ -68,7 +68,9 @@
      <Compile Include="Assets\Scripts\1SampleScene\Boss\Generator.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Enemy\Enemy_Shooting.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Boss\GeneratorCounter.cs" />
+     <Compile Include="Assets\Audio\Scripts\Sound.cs" />
      <Compile Include="Assets\Scripts\Shop\Upgrades\LivesUpgradeButton.cs" />
+     <Compile Include="Assets\Audio\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Shop\ReturnToMainMenu.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\_Objects\Bullet.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Enemy\Enemy_Movement.cs" />
@@ -93,8 +95,7 @@
      <Compile Include="Assets\Scripts\MainMenu\Ship_Texture1.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\UI\Score.cs" />
      <Compile Include="Assets\Scripts\1SampleScene\Events.cs" />
-     <Compile Include="Assets\Audio\Scripts\Sound.cs" />
-     <Compile Include="Assets\Audio\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Audio\Scripts\SoundLevel.cs" />
     <Reference Include="UnityEngine">
         <HintPath>E:/Gamedev/Unity/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

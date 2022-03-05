@@ -19,7 +19,7 @@ public class Buttons : MonoBehaviour
     void Start()
     {   
         _Start.onClick.AddListener(_StartClick);
-        _Settings.onClick.AddListener(_SettingsClick);
+        //_Settings.onClick.AddListener(_SettingsClick);
         //_Exit.onClick.AddListener(_ExitClick);
         _Shop.onClick.AddListener(_ShopClick);
         //Debug.Log(Application.persistentDataPath);
@@ -30,7 +30,7 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
-    void _SettingsClick()
+    /*void _SettingsClick()
     {
         //GlobalCache.Inst.SaveData();
         SceneManager.LoadScene("Settings");

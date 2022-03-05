@@ -13,14 +13,16 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
             return; 
-        }
+        }   
         DontDestroyOnLoad(gameObject);
-        
+        GlobalCache.Inst.LoadData();
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            s.source.volume = s.volume;
+            //    s.source.volume = s.volume * GlobalCache.Inst.MusicLevel;
+            
+            s.source.volume = s.volume * GlobalCache.Inst.SoundLevel;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
@@ -38,5 +40,22 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+    public void Reload()
+    {
+        GlobalCache.Inst.LoadData();
+        AudioSource[] sources = GetComponents<AudioSource>();
+        foreach(AudioSource sr in sources)
+        {
+            foreach (Sound sd in sounds)
+            {
+                if(sd.clip == sr.clip)
+                {
+                    sr.volume = sd.volume * GlobalCache.Inst.SoundLevel;
+                    sr.pitch = sd.pitch;
+                    sr.loop = sd.loop;
+                }
+            }
+        }
     }
 }

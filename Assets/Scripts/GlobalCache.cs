@@ -33,6 +33,9 @@ public class GlobalCache//: MonoBehaviour
     public int WeaponUpgradeCount {get {return weaponUpgradeCount;} set {weaponUpgradeCount = value;} }
 
 
+    public float SoundLevel;
+    //public float MusicLevel;
+
     private string folderPath;
     private string path;
     public void SaveData()
@@ -58,6 +61,8 @@ public class GlobalCache//: MonoBehaviour
                 sw.WriteLine("ShipTexture " + ShipTexture.ToString());
                 sw.WriteLine("Coins " + Gold.ToString());
                 sw.WriteLine("Gems " + Gems.ToString());
+                sw.WriteLine("SoundLevel " + SoundLevel.ToString());
+                //sw.WriteLine("MusicLevel " + MusicLevel.ToString());
             }
         }
         else
@@ -72,6 +77,8 @@ public class GlobalCache//: MonoBehaviour
                 sw.WriteLine("ShipTexture " + ShipTexture.ToString());
                 sw.WriteLine("Coins " + Gold.ToString());
                 sw.WriteLine("Gems " + Gems.ToString());
+                sw.WriteLine("SoundLevel " + SoundLevel.ToString());
+                //sw.WriteLine("MusicLevel " + MusicLevel.ToString());
             }
         }
     }
@@ -105,6 +112,10 @@ public class GlobalCache//: MonoBehaviour
                     Gold = int.Parse(Count);
                 if(Name == "Gems")
                     Gems = int.Parse(Count);
+                if(Name == "SoundLevel")
+                    SoundLevel = float.Parse(Count);
+                //if(Name == "MusicLevel")
+                //    MusicLevel = float.Parse(Count);
             }
         }
     }
