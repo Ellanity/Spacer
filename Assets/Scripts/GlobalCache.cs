@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GlobalCache//: MonoBehaviour
 {
     public static GlobalCache Inst = new GlobalCache();
-    public int Gold = 150;
+    public int Gold = 0;
     public int Gems = 0;
     
     public int Score = 0;
@@ -33,7 +33,7 @@ public class GlobalCache//: MonoBehaviour
     public int WeaponUpgradeCount {get {return weaponUpgradeCount;} set {weaponUpgradeCount = value;} }
 
 
-    public float SoundLevel;
+    public float SoundLevel = 1f;
     //public float MusicLevel;
 
     private string folderPath;
